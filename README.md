@@ -16,9 +16,15 @@ Infrastructure as Code via Terraform deploys the full stack in 15 minutes. NAT i
 
 ## Monitoring
 
+Grafana pulls metrics from both webservers via Prometheus. The dashboard shows load average, CPU, memory, and Apache request rates across both availability zones.
+
 ![Grafana](images/grafana-monitoring.png)
 
+Per-instance metrics in real time. Each webserver runs a Node Exporter that feeds data into Prometheus every 15 seconds.
+
 ![Real-time Metrics](images/grafana-metrics.png)
+
+Alerts fire automatically when thresholds are crossed. CPU above 80% for 5 minutes pages the ops team, memory below 20% triggers an on-call notification.
 
 ![Alerting Rules](images/grafana-alerts.png)
 
