@@ -14,6 +14,10 @@ Infrastructure as Code via Terraform deploys the full stack in 15 minutes. NAT i
 
 ![Architecture](images/architecture.png)
 
+## Monitoring
+
+![Grafana](images/grafana-monitoring.png)
+
 ## Tech stack
 
 | Component | Technology |
